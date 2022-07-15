@@ -1,0 +1,12 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-dual-listbox name="accessories"
+                                    label="Select Accessories"
+                                    source-label="Available"
+                                    selected-label="Selected"
+                                    options={options}
+                                    onchange={onChangeHandler}></lightning-dual-listbox>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

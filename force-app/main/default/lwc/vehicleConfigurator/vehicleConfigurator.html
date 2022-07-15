@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <div style="min-width: 275px; border-right: 1px solid #e7e7e7;">
+            <lightning-layout>
+                <lightning-layout-item size="2">
+                    <lightning-vertical-navigation selected-item={selectedItem} onselect={handleSelect} class="navigation">
+                        <lightning-vertical-navigation-section label="Reports">
+                            <lightning-vertical-navigation-item label="Recently Viewed" name="reports_recent"></lightning-vertical-navigation-item>
+                            <lightning-vertical-navigation-item label="Private Reports" name="reports_private"></lightning-vertical-navigation-item>
+                            <lightning-vertical-navigation-item label="Public Reports" name="reports_public"></lightning-vertical-navigation-item>
+                            <lightning-vertical-navigation-item label="All Reports" name="reports_all"></lightning-vertical-navigation-item>
+                            <lightning-vertical-navigation-item label="Recently Updated" name="reports_updated"></lightning-vertical-navigation-item>
+                        </lightning-vertical-navigation-section>
+                    </lightning-vertical-navigation>
+                </lightning-layout-item>
+                <lightning-layout-item size="8" padding="around-small">
+                    <p>You Are Viewing: {currentContent} Basic HTML Animals This is the first paragraph in our page. It introduces our animals. The Llama Our Llama is a big fan of list items. When she spies a patch of them on a web page, she will eat them like sweets, licking her lips as she goes. The Anaconda The crafty anaconda likes to slither around the page, travelling rapidly by way of anchors to sneak up on his prey.</p>
+                    <c-vehicle-detail></c-vehicle-detail>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>
