@@ -1,0 +1,31 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-combobox
+                name="120vLoadingTime"
+                label="120v Loading Time"
+                value={loadingTimeValue120v}
+                placeholder="Select Loading Time"
+                options={loadingTimeOptions}
+                onchange={onChangeHandler}></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-combobox
+                name="240vLoadingTime"
+                label="240v Loading Time"
+                value={loadingTimeValue240v}
+                placeholder="Select Loading Time"
+                options={loadingTimeOptions}
+                onchange={onChangeHandler}></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-combobox
+                name="batteryWarranty"
+                label="Battery Warranty"
+                value={batteryWarranty}
+                placeholder="Select Battery Warranty"
+                options={batteryWarrantyOptions}
+                onchange={onChangeHandler}></lightning-combobox>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
