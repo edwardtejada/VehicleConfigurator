@@ -20,8 +20,12 @@ export default class VehicleConfigurator extends LightningElement {
         return this.currentContent == 'observations';
     }
 
-    get isVehicleTeamMember() {
+    get isVehicleTeamMemberSeelct() {
         return this.currentContent == 'vehicle_team_member';
+    }
+
+    get isPhotoSelect() {
+        return this.currentContent == 'photo';
     }
 
     handleSelect(event) {

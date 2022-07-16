@@ -9,6 +9,7 @@
                             <lightning-vertical-navigation-item label="Electric vehicle" name="electric_vehicle"></lightning-vertical-navigation-item>
                             <lightning-vertical-navigation-item label="Accessories" name="accessories"></lightning-vertical-navigation-item>
                             <lightning-vertical-navigation-item label="Observations" name="observations"></lightning-vertical-navigation-item>
+                            <lightning-vertical-navigation-item label="Photo" name="photo"></lightning-vertical-navigation-item>
                             <lightning-vertical-navigation-item label="Vehicle team member" name="vehicle_team_member"></lightning-vertical-navigation-item>
                         </lightning-vertical-navigation-section>
                     </lightning-vertical-navigation>
@@ -18,20 +19,20 @@
                     <c-electric-vehicle if:true={isElectricVehicleSelect}></c-electric-vehicle>
                     <c-accessories-detail if:true={isAccessoriesSelect}></c-accessories-detail>
                     <c-observation if:true={isObservationsSelect}></c-observation>
-                    <c-file-upload if:true={isVehicleTeamMember}></c-file-upload>
+                    <c-file-upload if:true={isPhotoSelect}></c-file-upload>
                 </lightning-layout-item>
             </lightning-layout>
         </div>
         <div slot="footer">
-            <lightning-button variant="destructive" 
-                            label="Destructive" 
-                            title="Destructive action" 
+            <lightning-button variant="neutral" 
+                            label="Cancel" 
+                            title="Cancel" 
                             onclick={handleClick} 
                             class="slds-m-left_x-small">
             </lightning-button>
             <lightning-button variant="brand" 
-                            label="Brand" 
-                            title="Primary action" 
+                            label="Save" 
+                            title="Save" 
                             onclick={handleClick} 
                             class="slds-m-left_x-small">
             </lightning-button>
