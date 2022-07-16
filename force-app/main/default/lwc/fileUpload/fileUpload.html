@@ -18,13 +18,19 @@
                     <thead>
                         <tr class="slds-line-height_reset">
                             <th class="" scope="col">
+                                <div class="slds-truncate" title="File">File</div>
+                            </th>
+                            <th class="" scope="col">
                                 <div class="slds-truncate" title="File Name">File Name</div>
                             </th>
                             <th class="" scope="col">
-                                <div class="slds-truncate" title="File Size">File Type</div>
+                                <div class="slds-truncate" title="File Type">File Type</div>
                             </th>
                             <th class="" scope="col">
                                 <div class="slds-truncate" title="File Size">File Size</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Action">Action</div>
                             </th>
                         </tr>
                     </thead>
@@ -32,8 +38,11 @@
                         <template for:each={lstAllFiles} for:item="fileIterator">
                             <tr class="slds-hint-parent" key={fileIterator}>
                                 <th data-label="Opportunity Name" scope="row">
-                                    <lightning-icon icon-name="doctype:image" size="small" title="Image"></lightning-icon>
-                                    {fileIterator.ContentDocument.Title}
+                                    <!-- <lightning-icon icon-name="doctype:image" size="small" title="Image"></lightning-icon> -->
+                                    <img src={fileIterator.imgUrl} width="150px" height="150px">
+                                </th>
+                                <th data-label="Opportunity Name" scope="row">
+                                    {fileIterator.ContentDocument.Title}s
                                 </th>
                                 <td data-label="Account Name">
                                     <div class="slds-truncate" title="Cloudhub">
@@ -44,6 +53,16 @@
                                     <div class="slds-truncate" title="Cloudhub">
                                         {fileIterator.ContentDocument.ContentSize} Byte
                                     </div>
+                                </td>
+                                <td data-label="Account Name">
+                                    <lightning-button variant="Destructive" 
+                                            icon-name="utility:delete" 
+                                            icon-position="right" 
+                                            label="Delete" 
+                                            name="delete" 
+                                            data-id={fileIterator.ContentDocumentId}
+                                            onclick={deleteHandler}>
+                                    </lightning-button>
                                 </td>
                             </tr>
                         </template>
