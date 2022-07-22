@@ -2,10 +2,10 @@
     <lightning-layout multiple-rows>
         <lightning-layout-item size="12" padding="around-small">
             <lightning-button 
-                label="Add Row" 
+                label="Add Team Member" 
                 class="slds-float_right" 
                 icon-name="utility:add" 
-                onclick={addRow}>
+                onclick={addTeamMemberHandler}>
             </lightning-button>
         </lightning-layout-item>
         <lightning-layout-item size="12" padding="around-small">
@@ -47,4 +47,5 @@
             </table>
         </lightning-layout-item>
     </lightning-layout>
+    <c-vehicle-team-member-modal is-modal-open={openModal}></c-vehicle-team-member-modal>
 </template>

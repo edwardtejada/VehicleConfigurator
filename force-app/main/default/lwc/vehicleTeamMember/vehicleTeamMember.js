@@ -7,6 +7,12 @@ export default class VehicleTeamMember extends LightningElement {
     vehicleTeamMemberId;
     @api recordId = 'a048Z00000l1S50QAE';
     @track lstAllTeamMember = [];
+    openModal = false;
+
+    constructor() {
+        super();
+        this.template.addEventListener('closeModal', this.onCloseModal.bind(this));
+    }
 
     connectedCallback() {
         getVehicleTeamMember({ vehicleId: this.recordId }).then(result => {           
@@ -41,5 +47,13 @@ export default class VehicleTeamMember extends LightningElement {
             variant : variant,
         });
         this.dispatchEvent(toastEvent);
+    }
+
+    addTeamMemberHandler() {
+        this.openModal = true;
+    }
+
+    onCloseModal(event) {
+        this.openModal = event.detail; 
     }
 }
